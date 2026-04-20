@@ -1,0 +1,6 @@
+web3>=6.20
+aiohttp>=3.10
+pydantic>=2.9
+sqlalchemy>=2.0
+duckdb>=1.1
+python-dotenv>=1.0

@@ -1,0 +1,29 @@
+{
+  "name": "clarity",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Crypto safety & onboarding agent. Localized to 7 native languages.",
+  "license": "MIT",
+  "workspaces": [
+    "extension",
+    "webapp",
+    "engine",
+    "shared"
+  ],
+  "scripts": {
+    "dev:extension": "npm run dev --workspace=extension",
+    "dev:webapp": "npm run dev --workspace=webapp",
+    "dev:engine": "npm run dev --workspace=engine",
+    "build": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/node": "^22.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

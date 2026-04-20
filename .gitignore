@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+*.tsbuildinfo
+extension/dist/
+extension/build/
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+*.coverage
+
+# OS
+Thumbs.db
+
+# Secrets
+**/secrets.json
+**/*.key
+**/*.pem
+
+# Data (big files shouldn't be in repo)
+data/raw/
+data/*.parquet
+data/*.csv.gz
