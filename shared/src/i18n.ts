@@ -23,7 +23,7 @@ export const DEFAULT_LOCALE: Locale = 'en';
  */
 export function detectLocale(): Locale {
   if (typeof navigator === 'undefined') return DEFAULT_LOCALE;
-  const lang = navigator.language.toLowerCase().split('-')[0];
+  const lang = navigator.language.toLowerCase().split('-')[0] ?? '';
   return (SUPPORTED_LOCALES as readonly string[]).includes(lang)
     ? (lang as Locale)
     : DEFAULT_LOCALE;
