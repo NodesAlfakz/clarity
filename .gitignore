@@ -55,3 +55,4 @@ Thumbs.db
 data/raw/
 data/*.parquet
 data/*.csv.gz
+indexer/.data/
