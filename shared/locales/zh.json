@@ -1,0 +1,148 @@
+{
+  "risk": {
+    "level": {
+      "safe": "安全",
+      "caution": "注意",
+      "danger": "危险",
+      "critical": "严重"
+    },
+    "summary": {
+      "safe": "未检测到风险标记。",
+      "caution_one": "检测到 {{count}} 个注意标记。",
+      "caution_other": "检测到 {{count}} 个注意标记。",
+      "danger_one": "检测到 {{count}} 个危险标记 — 签名前请仔细审查。",
+      "danger_other": "检测到 {{count}} 个危险标记 — 签名前请仔细审查。",
+      "critical_one": "检测到 {{count}} 个严重标记 — 除非确认无误,否则请勿签名。",
+      "critical_other": "检测到 {{count}} 个严重标记 — 除非确认无误,否则请勿签名。"
+    },
+    "flag": {
+      "unlimited_approval": {
+        "title": "无限额代币授权",
+        "description": "此交易授予接收方无限制转移你代币的权限。如果合约被攻击,你的全部余额都将面临风险。建议只授权你当前打算花费的确切数量。"
+      },
+      "unverified_contract": {
+        "title": "未验证合约",
+        "description": "该合约源代码在区块浏览器上未通过验证。Clarity 无法确认此合约的行为。签名前请仔细审查该项目。"
+      },
+      "known_phishing": {
+        "title": "已知钓鱼",
+        "description": "此交易与已标记为钓鱼的地址交互。请勿签名 — 你的资金将被盗。"
+      },
+      "suspicious_counterparty": {
+        "title": "可疑对手方",
+        "description": "交易另一端的合约符合已知诈骗模式。仅在确认其合法性时才继续。"
+      },
+      "high_slippage": {
+        "title": "高滑点",
+        "description": "此次兑换允许超过 5% 的滑点。你可能收到的代币远少于报价。"
+      },
+      "unusual_gas_price": {
+        "title": "异常 Gas 费",
+        "description": "此交易的 Gas 费远高于当前网络平均水平。你可能多付了手续费。"
+      },
+      "first_interaction": {
+        "title": "首次交互",
+        "description": "你从未与此地址交互过。请再次确认这是你真正想要交互的地址。"
+      },
+      "contract_proxy_mismatch": {
+        "title": "代理不匹配",
+        "description": "此合约是代理合约,其实现与接口提示不一致。实际执行逻辑可能与预期不符。"
+      },
+      "sanctioned_address": {
+        "title": "制裁地址",
+        "description": "该交易接收方在制裁名单中。与其交互可能违反当地法律。"
+      }
+    }
+  },
+  "intent": {
+    "summary": {
+      "native_transfer": "向 {{to}} 原生转账 {{amount}}",
+      "erc20_transfer": "通过 {{to}} 的 ERC-20 转账",
+      "erc20_approve": "授权 ERC-20 给合约 {{to}}",
+      "erc20_increase_allowance": "向合约 {{to}} 增加 ERC-20 额度",
+      "erc721_transfer": "通过 {{to}} 转移 NFT",
+      "erc721_approve_all": "向 {{to}} 上的操作者授权整个 NFT 系列",
+      "uniswap_v2_swap": "通过 Uniswap 路由器 {{to}} 兑换",
+      "uniswap_v3_exact_input": "通过 Uniswap V3 路由器 {{to}} 兑换",
+      "aave_supply": "向 Aave 池 {{to}} 存款",
+      "aave_borrow": "从 Aave 池 {{to}} 借款",
+      "aave_repay": "向 Aave 池 {{to}} 偿还",
+      "aave_withdraw": "从 Aave 池 {{to}} 提款",
+      "permit2_approve": "Permit2 签名授权给 {{to}}",
+      "multicall": "向 {{to}} 发起批量多次调用",
+      "unknown_contract_call": "调用合约 {{to}} (选择器 {{selector}})",
+      "empty": "空交易"
+    }
+  },
+  "classification": {
+    "hodler": "HODLer",
+    "trader": "活跃交易者",
+    "yield_farmer": "收益农夫",
+    "sybil_farmer": "女巫农夫",
+    "responsible_borrower": "负责任的借款人",
+    "risky_borrower": "高风险借款人",
+    "defaulter": "违约者",
+    "new_wallet": "新钱包"
+  },
+  "size": {
+    "whale": "巨鲸",
+    "mid": "中等",
+    "small": "小额",
+    "dust": "尘埃"
+  },
+  "ui": {
+    "app_name": "Clarity",
+    "tagline": "用你的母语理解你正在签署的内容。",
+    "button": {
+      "continue": "继续",
+      "cancel": "取消",
+      "connect_wallet": "连接钱包",
+      "sign": "签署交易",
+      "review": "查看详情",
+      "learn_more": "了解更多",
+      "start": "开始",
+      "next": "下一步",
+      "back": "返回",
+      "done": "完成"
+    },
+    "section": {
+      "what_does_this_do": "此交易做什么",
+      "risk_level": "风险等级",
+      "counterparty": "对手方",
+      "simulation": "模拟结果",
+      "alternatives": "替代方案",
+      "history": "借贷历史"
+    },
+    "label": {
+      "language": "语言",
+      "protocol": "协议",
+      "borrowed": "总借款",
+      "repaid": "总还款",
+      "liquidations": "清算次数",
+      "active_loans": "活跃贷款",
+      "score": "信用评分",
+      "classification": "行为"
+    },
+    "inspect": {
+      "title": "检查地址",
+      "placeholder": "输入以太坊地址 (0x...)",
+      "lookup": "查询"
+    },
+    "onboarding": {
+      "welcome": "欢迎来到加密世界",
+      "intro": "我会引导你完成第一步。不用术语,不跳过安全。",
+      "path": {
+        "newcomer": "我从未使用过加密货币",
+        "has_wallet": "我有钱包但没经验",
+        "active": "我很活跃,告诉我我错过了什么"
+      },
+      "step": {
+        "install_wallet": "安装钱包",
+        "on_ramp": "购买你的第一笔加密货币",
+        "first_swap": "进行首次兑换",
+        "security": "设置安全",
+        "first_defi": "开始赚取收益"
+      }
+    }
+  }
+}

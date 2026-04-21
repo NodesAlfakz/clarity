@@ -1,0 +1,148 @@
+{
+  "risk": {
+    "level": {
+      "safe": "안전",
+      "caution": "주의",
+      "danger": "위험",
+      "critical": "심각"
+    },
+    "summary": {
+      "safe": "위험 표시가 감지되지 않았습니다.",
+      "caution_one": "주의 표시 {{count}}개가 감지되었습니다.",
+      "caution_other": "주의 표시 {{count}}개가 감지되었습니다.",
+      "danger_one": "위험 표시 {{count}}개가 감지되었습니다 — 서명 전 신중히 검토하세요.",
+      "danger_other": "위험 표시 {{count}}개가 감지되었습니다 — 서명 전 신중히 검토하세요.",
+      "critical_one": "심각 표시 {{count}}개가 감지되었습니다 — 확실하지 않으면 서명하지 마세요.",
+      "critical_other": "심각 표시 {{count}}개가 감지되었습니다 — 확실하지 않으면 서명하지 마세요."
+    },
+    "flag": {
+      "unlimited_approval": {
+        "title": "무제한 토큰 승인",
+        "description": "이 거래는 상대방에게 귀하의 토큰을 무제한으로 이동할 수 있는 권한을 부여합니다. 해당 컨트랙트가 침해당하면 전체 잔액이 위험에 노출됩니다. 사용할 정확한 금액만 승인하는 것이 좋습니다."
+      },
+      "unverified_contract": {
+        "title": "미검증 컨트랙트",
+        "description": "컨트랙트 소스 코드가 블록 탐색기에서 검증되지 않았습니다. Clarity는 이 컨트랙트의 동작을 확인할 수 없습니다. 서명 전에 프로젝트를 신중히 검토하세요."
+      },
+      "known_phishing": {
+        "title": "알려진 피싱",
+        "description": "이 거래는 피싱으로 표시된 주소와 상호작용합니다. 서명하지 마세요 — 자금이 도난당합니다."
+      },
+      "suspicious_counterparty": {
+        "title": "의심스러운 상대방",
+        "description": "거래 상대 컨트랙트가 사기 패턴과 일치합니다. 합법성을 확신할 때만 진행하세요."
+      },
+      "high_slippage": {
+        "title": "높은 슬리피지",
+        "description": "이 스왑은 5% 이상의 슬리피지를 허용합니다. 견적보다 훨씬 적은 토큰을 받을 수 있습니다."
+      },
+      "unusual_gas_price": {
+        "title": "비정상적 가스비",
+        "description": "이 거래의 가스비가 현재 네트워크 평균보다 훨씬 높습니다. 과지불할 수 있습니다."
+      },
+      "first_interaction": {
+        "title": "첫 상호작용",
+        "description": "이 주소와 이전에 상호작용한 적이 없습니다. 의도한 주소가 맞는지 다시 확인하세요."
+      },
+      "contract_proxy_mismatch": {
+        "title": "프록시 불일치",
+        "description": "이 컨트랙트는 구현이 인터페이스와 다른 프록시입니다. 실제 실행 로직이 예상과 다를 수 있습니다."
+      },
+      "sanctioned_address": {
+        "title": "제재 대상 주소",
+        "description": "이 거래의 수신자는 제재 목록에 있습니다. 상호작용은 현지 법률을 위반할 수 있습니다."
+      }
+    }
+  },
+  "intent": {
+    "summary": {
+      "native_transfer": "{{to}}로 {{amount}} 네이티브 전송",
+      "erc20_transfer": "{{to}}를 통한 ERC-20 전송",
+      "erc20_approve": "컨트랙트 {{to}}에 ERC-20 승인",
+      "erc20_increase_allowance": "컨트랙트 {{to}}에 ERC-20 한도 증가",
+      "erc721_transfer": "{{to}}를 통한 NFT 전송",
+      "erc721_approve_all": "{{to}}의 운영자에게 전체 NFT 컬렉션 승인",
+      "uniswap_v2_swap": "Uniswap 라우터 {{to}}를 통한 스왑",
+      "uniswap_v3_exact_input": "Uniswap V3 라우터 {{to}}를 통한 스왑",
+      "aave_supply": "Aave 풀 {{to}}에 공급",
+      "aave_borrow": "Aave 풀 {{to}}에서 대출",
+      "aave_repay": "Aave 풀 {{to}}에 상환",
+      "aave_withdraw": "Aave 풀 {{to}}에서 출금",
+      "permit2_approve": "{{to}}에 대한 Permit2 서명 기반 승인",
+      "multicall": "{{to}}에 일괄 멀티 호출",
+      "unknown_contract_call": "컨트랙트 {{to}} 호출 (셀렉터 {{selector}})",
+      "empty": "빈 거래"
+    }
+  },
+  "classification": {
+    "hodler": "HODLer",
+    "trader": "활성 트레이더",
+    "yield_farmer": "일드 파머",
+    "sybil_farmer": "시빌 파머",
+    "responsible_borrower": "성실한 차용인",
+    "risky_borrower": "위험 차용인",
+    "defaulter": "채무불이행자",
+    "new_wallet": "새 지갑"
+  },
+  "size": {
+    "whale": "고래",
+    "mid": "중간",
+    "small": "소액",
+    "dust": "먼지"
+  },
+  "ui": {
+    "app_name": "Clarity",
+    "tagline": "당신이 서명하는 것을 당신의 언어로 이해하세요.",
+    "button": {
+      "continue": "계속",
+      "cancel": "취소",
+      "connect_wallet": "지갑 연결",
+      "sign": "거래 서명",
+      "review": "세부 정보 검토",
+      "learn_more": "자세히 보기",
+      "start": "시작",
+      "next": "다음",
+      "back": "뒤로",
+      "done": "완료"
+    },
+    "section": {
+      "what_does_this_do": "이 거래가 하는 일",
+      "risk_level": "위험 수준",
+      "counterparty": "상대방",
+      "simulation": "시뮬레이션 결과",
+      "alternatives": "대안",
+      "history": "대출 기록"
+    },
+    "label": {
+      "language": "언어",
+      "protocol": "프로토콜",
+      "borrowed": "총 대출",
+      "repaid": "총 상환",
+      "liquidations": "청산 횟수",
+      "active_loans": "활성 대출",
+      "score": "신용 점수",
+      "classification": "행동"
+    },
+    "inspect": {
+      "title": "주소 검사",
+      "placeholder": "이더리움 주소 입력 (0x...)",
+      "lookup": "조회"
+    },
+    "onboarding": {
+      "welcome": "암호화폐 세계에 오신 것을 환영합니다",
+      "intro": "첫 걸음을 안내해 드립니다. 전문 용어 없이, 보안을 건너뛰지 않고.",
+      "path": {
+        "newcomer": "암호화폐를 사용해 본 적이 없습니다",
+        "has_wallet": "지갑은 있지만 경험이 없습니다",
+        "active": "활동 중인데 놓치고 있는 것이 무엇인지 알려주세요"
+      },
+      "step": {
+        "install_wallet": "지갑 설치",
+        "on_ramp": "첫 암호화폐 구매",
+        "first_swap": "첫 스왑",
+        "security": "보안 설정",
+        "first_defi": "수익 창출 시작"
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "risk": {
+    "level": {
+      "safe": "Güvenli",
+      "caution": "Dikkat",
+      "danger": "Tehlike",
+      "critical": "Kritik"
+    },
+    "summary": {
+      "safe": "Risk işareti tespit edilmedi.",
+      "caution_one": "{{count}} dikkat işareti tespit edildi.",
+      "caution_other": "{{count}} dikkat işareti tespit edildi.",
+      "danger_one": "{{count}} tehlike işareti tespit edildi — imzalamadan önce dikkatlice inceleyin.",
+      "danger_other": "{{count}} tehlike işareti tespit edildi — imzalamadan önce dikkatlice inceleyin.",
+      "critical_one": "{{count}} kritik işaret tespit edildi — emin değilseniz imzalamayın.",
+      "critical_other": "{{count}} kritik işaret tespit edildi — emin değilseniz imzalamayın."
+    },
+    "flag": {
+      "unlimited_approval": {
+        "title": "Sınırsız token onayı",
+        "description": "Bu işlem karşı tarafa tokenlerinizi sınırsız miktarda taşıma izni veriyor. Eğer bu sözleşme tehlikeye girerse, tüm bakiyeniz risk altında. Sadece harcamayı düşündüğünüz kesin miktarı onaylayın."
+      },
+      "unverified_contract": {
+        "title": "Doğrulanmamış sözleşme",
+        "description": "Sözleşmenin kaynak kodu blok gezgininde doğrulanmamış. Clarity bu sözleşmenin ne yaptığını doğrulayamıyor. İmzalamadan önce projeyi dikkatlice inceleyin."
+      },
+      "known_phishing": {
+        "title": "Bilinen phishing",
+        "description": "Bu işlem phishing olarak işaretlenmiş bir adresle etkileşime giriyor. İmzalamayın — fonlarınız çalınacak."
+      },
+      "suspicious_counterparty": {
+        "title": "Şüpheli karşı taraf",
+        "description": "İşlemin diğer tarafındaki sözleşme dolandırıcılık modelleriyle eşleşiyor. Sadece meşruiyetinden eminseniz devam edin."
+      },
+      "high_slippage": {
+        "title": "Yüksek slippage",
+        "description": "Bu takas %5'ten fazla slippage'a izin veriyor. Teklif edilenden çok daha az token alabilirsiniz."
+      },
+      "unusual_gas_price": {
+        "title": "Olağandışı gas ücreti",
+        "description": "Bu işlemin gas ücreti mevcut ağ ortalamasının çok üzerinde. Fazla ödeyebilirsiniz."
+      },
+      "first_interaction": {
+        "title": "İlk etkileşim",
+        "description": "Bu adresle daha önce hiç etkileşime girmediniz. Gerçekten istediğiniz adres olduğunu iki kez kontrol edin."
+      },
+      "contract_proxy_mismatch": {
+        "title": "Proxy uyuşmazlığı",
+        "description": "Bu sözleşme, uygulaması arayüzünün önerdiğinden farklı bir proxy'dir. Gerçek mantık beklediğinizle eşleşmeyebilir."
+      },
+      "sanctioned_address": {
+        "title": "Yaptırım altındaki adres",
+        "description": "Bu işlemin alıcısı yaptırım listesinde. Etkileşim yerel yasaları ihlal edebilir."
+      }
+    }
+  },
+  "intent": {
+    "summary": {
+      "native_transfer": "{{to}} adresine {{amount}} yerel transfer",
+      "erc20_transfer": "{{to}} üzerinden ERC-20 transferi",
+      "erc20_approve": "{{to}} sözleşmesine ERC-20 onayı",
+      "erc20_increase_allowance": "{{to}} sözleşmesine ERC-20 limiti artışı",
+      "erc721_transfer": "{{to}} üzerinden NFT transferi",
+      "erc721_approve_all": "{{to}} üzerindeki operatöre tüm koleksiyon NFT onayı",
+      "uniswap_v2_swap": "Uniswap router {{to}} üzerinden takas",
+      "uniswap_v3_exact_input": "Uniswap V3 router {{to}} üzerinden takas",
+      "aave_supply": "Aave pool {{to}} adresine yatırım",
+      "aave_borrow": "Aave pool {{to}} adresinden borç",
+      "aave_repay": "Aave pool {{to}} adresine geri ödeme",
+      "aave_withdraw": "Aave pool {{to}} adresinden çekim",
+      "permit2_approve": "{{to}} için Permit2 imza tabanlı onay",
+      "multicall": "{{to}} adresine toplu çok çağrı",
+      "unknown_contract_call": "{{to}} sözleşmesine çağrı (seçici {{selector}})",
+      "empty": "Boş işlem"
+    }
+  },
+  "classification": {
+    "hodler": "HODLer",
+    "trader": "Aktif trader",
+    "yield_farmer": "Yield farmer",
+    "sybil_farmer": "Sybil farmer",
+    "responsible_borrower": "Sorumlu borçlu",
+    "risky_borrower": "Riskli borçlu",
+    "defaulter": "Temerrüde düşen",
+    "new_wallet": "Yeni cüzdan"
+  },
+  "size": {
+    "whale": "Balina",
+    "mid": "Orta",
+    "small": "Küçük",
+    "dust": "Toz"
+  },
+  "ui": {
+    "app_name": "Clarity",
+    "tagline": "İmzaladığın şeyi kendi dilinde anla.",
+    "button": {
+      "continue": "Devam",
+      "cancel": "İptal",
+      "connect_wallet": "Cüzdanı bağla",
+      "sign": "İşlemi imzala",
+      "review": "Ayrıntıları incele",
+      "learn_more": "Daha fazla",
+      "start": "Başla",
+      "next": "Sonraki",
+      "back": "Geri",
+      "done": "Tamam"
+    },
+    "section": {
+      "what_does_this_do": "Bu işlem ne yapıyor",
+      "risk_level": "Risk seviyesi",
+      "counterparty": "Karşı taraf",
+      "simulation": "Simülasyon sonucu",
+      "alternatives": "Alternatifler",
+      "history": "Borç geçmişi"
+    },
+    "label": {
+      "language": "Dil",
+      "protocol": "Protokol",
+      "borrowed": "Toplam borç",
+      "repaid": "Toplam ödenen",
+      "liquidations": "Likidasyonlar",
+      "active_loans": "Aktif krediler",
+      "score": "Kredi puanı",
+      "classification": "Davranış"
+    },
+    "inspect": {
+      "title": "Adresi incele",
+      "placeholder": "Ethereum adresi gir (0x...)",
+      "lookup": "Sorgula"
+    },
+    "onboarding": {
+      "welcome": "Kripto dünyasına hoş geldin",
+      "intro": "Sana ilk adımlarında rehberlik edeceğim. Jargon yok, güvenliği atlamak yok.",
+      "path": {
+        "newcomer": "Hiç kripto kullanmadım",
+        "has_wallet": "Cüzdanım var ama deneyimim yok",
+        "active": "Aktifim, neleri kaçırdığımı göster"
+      },
+      "step": {
+        "install_wallet": "Cüzdan yükle",
+        "on_ramp": "İlk kriptonu satın al",
+        "first_swap": "İlk takasını yap",
+        "security": "Güvenliği kur",
+        "first_defi": "Kazanmaya başla"
+      }
+    }
+  }
+}

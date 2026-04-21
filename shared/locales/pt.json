@@ -1,0 +1,148 @@
+{
+  "risk": {
+    "level": {
+      "safe": "Seguro",
+      "caution": "Atenção",
+      "danger": "Perigo",
+      "critical": "Crítico"
+    },
+    "summary": {
+      "safe": "Nenhum sinal de risco detectado.",
+      "caution_one": "{{count}} sinal de atenção detectado.",
+      "caution_other": "{{count}} sinais de atenção detectados.",
+      "danger_one": "{{count}} sinal de perigo detectado — revise com cuidado antes de assinar.",
+      "danger_other": "{{count}} sinais de perigo detectados — revise com cuidado antes de assinar.",
+      "critical_one": "{{count}} sinal crítico detectado — não assine se não tiver certeza.",
+      "critical_other": "{{count}} sinais críticos detectados — não assine se não tiver certeza."
+    },
+    "flag": {
+      "unlimited_approval": {
+        "title": "Aprovação ilimitada de token",
+        "description": "Esta transação dá ao destinatário permissão ilimitada para mover seus tokens. Se o contrato for comprometido, todo o seu saldo está em risco. Prefira aprovar apenas a quantidade exata que pretende gastar."
+      },
+      "unverified_contract": {
+        "title": "Contrato não verificado",
+        "description": "O código-fonte do contrato não está verificado no explorador de blocos. Clarity não pode confirmar o que este contrato faz. Revise o projeto com cuidado antes de assinar."
+      },
+      "known_phishing": {
+        "title": "Phishing conhecido",
+        "description": "Esta transação interage com um endereço marcado como phishing. Não assine — seus fundos serão roubados."
+      },
+      "suspicious_counterparty": {
+        "title": "Contraparte suspeita",
+        "description": "O contrato do outro lado desta transação corresponde a padrões de fraude. Prossiga apenas se tiver certeza de sua legitimidade."
+      },
+      "high_slippage": {
+        "title": "Slippage alto",
+        "description": "Este swap permite mais de 5% de slippage. Você pode receber muito menos tokens do que a cotação indica."
+      },
+      "unusual_gas_price": {
+        "title": "Preço de gás incomum",
+        "description": "O preço do gás desta transação está muito acima da média atual da rede. Você pode pagar a mais."
+      },
+      "first_interaction": {
+        "title": "Primeira interação",
+        "description": "Você nunca interagiu com este endereço antes. Verifique duas vezes se é o endereço que você pretendia."
+      },
+      "contract_proxy_mismatch": {
+        "title": "Proxy inconsistente",
+        "description": "Este contrato é um proxy cuja implementação difere do que a interface sugere. A lógica real pode não corresponder ao esperado."
+      },
+      "sanctioned_address": {
+        "title": "Endereço sancionado",
+        "description": "O destinatário desta transação está em uma lista de sanções. Interagir pode violar a lei local."
+      }
+    }
+  },
+  "intent": {
+    "summary": {
+      "native_transfer": "Transferência nativa de {{amount}} para {{to}}",
+      "erc20_transfer": "Transferência ERC-20 via {{to}}",
+      "erc20_approve": "Aprovação ERC-20 para o contrato {{to}}",
+      "erc20_increase_allowance": "Aumento de limite ERC-20 para o contrato {{to}}",
+      "erc721_transfer": "Transferência de NFT via {{to}}",
+      "erc721_approve_all": "Aprovação de coleção NFT completa para operador em {{to}}",
+      "uniswap_v2_swap": "Swap estilo Uniswap via roteador {{to}}",
+      "uniswap_v3_exact_input": "Swap Uniswap V3 via roteador {{to}}",
+      "aave_supply": "Depósito Aave no pool {{to}}",
+      "aave_borrow": "Empréstimo Aave do pool {{to}}",
+      "aave_repay": "Pagamento Aave para o pool {{to}}",
+      "aave_withdraw": "Saque Aave do pool {{to}}",
+      "permit2_approve": "Aprovação Permit2 por assinatura para {{to}}",
+      "multicall": "Chamada múltipla em lote para {{to}}",
+      "unknown_contract_call": "Chamada de contrato {{to}} (seletor {{selector}})",
+      "empty": "Transação vazia"
+    }
+  },
+  "classification": {
+    "hodler": "HODLer",
+    "trader": "Trader ativo",
+    "yield_farmer": "Yield farmer",
+    "sybil_farmer": "Sybil farmer",
+    "responsible_borrower": "Tomador responsável",
+    "risky_borrower": "Tomador arriscado",
+    "defaulter": "Inadimplente",
+    "new_wallet": "Carteira nova"
+  },
+  "size": {
+    "whale": "Baleia",
+    "mid": "Médio",
+    "small": "Pequeno",
+    "dust": "Pó"
+  },
+  "ui": {
+    "app_name": "Clarity",
+    "tagline": "Entenda o que você está assinando — no seu idioma.",
+    "button": {
+      "continue": "Continuar",
+      "cancel": "Cancelar",
+      "connect_wallet": "Conectar carteira",
+      "sign": "Assinar transação",
+      "review": "Revisar detalhes",
+      "learn_more": "Saiba mais",
+      "start": "Começar",
+      "next": "Próximo",
+      "back": "Voltar",
+      "done": "Pronto"
+    },
+    "section": {
+      "what_does_this_do": "O que esta transação faz",
+      "risk_level": "Nível de risco",
+      "counterparty": "Contraparte",
+      "simulation": "Resultado da simulação",
+      "alternatives": "Alternativas",
+      "history": "Histórico de empréstimos"
+    },
+    "label": {
+      "language": "Idioma",
+      "protocol": "Protocolo",
+      "borrowed": "Total emprestado",
+      "repaid": "Total pago",
+      "liquidations": "Liquidações",
+      "active_loans": "Empréstimos ativos",
+      "score": "Pontuação de crédito",
+      "classification": "Comportamento"
+    },
+    "inspect": {
+      "title": "Inspecionar endereço",
+      "placeholder": "Digite um endereço Ethereum (0x...)",
+      "lookup": "Consultar"
+    },
+    "onboarding": {
+      "welcome": "Bem-vindo ao cripto",
+      "intro": "Vou guiá-lo nos seus primeiros passos. Sem jargão, sem pular segurança.",
+      "path": {
+        "newcomer": "Nunca usei cripto",
+        "has_wallet": "Tenho uma carteira mas sem experiência",
+        "active": "Sou ativo, mostre o que estou perdendo"
+      },
+      "step": {
+        "install_wallet": "Instale uma carteira",
+        "on_ramp": "Compre sua primeira cripto",
+        "first_swap": "Faça seu primeiro swap",
+        "security": "Configure segurança",
+        "first_defi": "Comece a ganhar"
+      }
+    }
+  }
+}

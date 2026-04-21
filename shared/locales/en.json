@@ -1,0 +1,148 @@
+{
+  "risk": {
+    "level": {
+      "safe": "Safe",
+      "caution": "Caution",
+      "danger": "Danger",
+      "critical": "Critical"
+    },
+    "summary": {
+      "safe": "No risk flags detected.",
+      "caution_one": "{{count}} caution flag detected.",
+      "caution_other": "{{count}} caution flags detected.",
+      "danger_one": "{{count}} danger flag detected — review carefully before signing.",
+      "danger_other": "{{count}} danger flags detected — review carefully before signing.",
+      "critical_one": "{{count}} critical flag detected — do not sign unless you are certain.",
+      "critical_other": "{{count}} critical flags detected — do not sign unless you are certain."
+    },
+    "flag": {
+      "unlimited_approval": {
+        "title": "Unlimited token approval",
+        "description": "This transaction grants the spender unlimited permission to move your tokens. If the spender contract is ever compromised, your full balance is at risk. Prefer approving only the exact amount you intend to spend."
+      },
+      "unverified_contract": {
+        "title": "Unverified contract",
+        "description": "The contract source code is not verified on the block explorer. Clarity cannot confirm what this contract does. Review the project carefully before signing."
+      },
+      "known_phishing": {
+        "title": "Known phishing",
+        "description": "This transaction interacts with an address flagged as phishing. Do not sign — your funds will be stolen."
+      },
+      "suspicious_counterparty": {
+        "title": "Suspicious counterparty",
+        "description": "The contract on the other side of this transaction matches patterns associated with fraud. Proceed only if you are certain of its legitimacy."
+      },
+      "high_slippage": {
+        "title": "High slippage",
+        "description": "This swap allows more than 5% slippage. You may receive significantly fewer tokens than the quoted amount."
+      },
+      "unusual_gas_price": {
+        "title": "Unusual gas price",
+        "description": "The gas price on this transaction is far above the current network norm. You may overpay for inclusion."
+      },
+      "first_interaction": {
+        "title": "First interaction",
+        "description": "You have never interacted with this address before. Double-check it is the one you intended."
+      },
+      "contract_proxy_mismatch": {
+        "title": "Proxy mismatch",
+        "description": "This contract is a proxy whose implementation differs from what its interface suggests. The actual logic executed may not match what you expect."
+      },
+      "sanctioned_address": {
+        "title": "Sanctioned address",
+        "description": "The recipient of this transaction is on a sanctions list. Interacting may violate local law."
+      }
+    }
+  },
+  "intent": {
+    "summary": {
+      "native_transfer": "Native transfer of {{amount}} to {{to}}",
+      "erc20_transfer": "ERC-20 transfer via {{to}}",
+      "erc20_approve": "ERC-20 approval to contract {{to}}",
+      "erc20_increase_allowance": "ERC-20 allowance increase to contract {{to}}",
+      "erc721_transfer": "NFT transfer via {{to}}",
+      "erc721_approve_all": "Collection-wide NFT approval to operator on {{to}}",
+      "uniswap_v2_swap": "Uniswap-style swap via router {{to}}",
+      "uniswap_v3_exact_input": "Uniswap V3 swap via router {{to}}",
+      "aave_supply": "Aave supply to pool {{to}}",
+      "aave_borrow": "Aave borrow from pool {{to}}",
+      "aave_repay": "Aave repayment to pool {{to}}",
+      "aave_withdraw": "Aave withdrawal from pool {{to}}",
+      "permit2_approve": "Permit2 signature-based approval to {{to}}",
+      "multicall": "Batched multi-call to {{to}}",
+      "unknown_contract_call": "Contract call to {{to}} (selector {{selector}})",
+      "empty": "Empty transaction"
+    }
+  },
+  "classification": {
+    "hodler": "HODLer",
+    "trader": "Active trader",
+    "yield_farmer": "Yield farmer",
+    "sybil_farmer": "Sybil farmer",
+    "responsible_borrower": "Responsible borrower",
+    "risky_borrower": "Risky borrower",
+    "defaulter": "Defaulter",
+    "new_wallet": "New wallet"
+  },
+  "size": {
+    "whale": "Whale",
+    "mid": "Mid-sized",
+    "small": "Small",
+    "dust": "Dust"
+  },
+  "ui": {
+    "app_name": "Clarity",
+    "tagline": "Understand what you're signing — in your language.",
+    "button": {
+      "continue": "Continue",
+      "cancel": "Cancel",
+      "connect_wallet": "Connect wallet",
+      "sign": "Sign transaction",
+      "review": "Review details",
+      "learn_more": "Learn more",
+      "start": "Start",
+      "next": "Next",
+      "back": "Back",
+      "done": "Done"
+    },
+    "section": {
+      "what_does_this_do": "What this transaction does",
+      "risk_level": "Risk level",
+      "counterparty": "Counterparty",
+      "simulation": "Simulation result",
+      "alternatives": "Alternatives",
+      "history": "Lending history"
+    },
+    "label": {
+      "language": "Language",
+      "protocol": "Protocol",
+      "borrowed": "Total borrowed",
+      "repaid": "Total repaid",
+      "liquidations": "Liquidations",
+      "active_loans": "Active loans",
+      "score": "Credit score",
+      "classification": "Behavior"
+    },
+    "inspect": {
+      "title": "Inspect an address",
+      "placeholder": "Enter an Ethereum address (0x...)",
+      "lookup": "Look up"
+    },
+    "onboarding": {
+      "welcome": "Welcome to crypto",
+      "intro": "I'll guide you through your first steps. No jargon, no skipping safety.",
+      "path": {
+        "newcomer": "I've never used crypto before",
+        "has_wallet": "I have a wallet but no experience",
+        "active": "I'm active, show me what I'm missing"
+      },
+      "step": {
+        "install_wallet": "Install a wallet",
+        "on_ramp": "Buy your first crypto",
+        "first_swap": "Make your first swap",
+        "security": "Set up security",
+        "first_defi": "Start earning"
+      }
+    }
+  }
+}
