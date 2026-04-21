@@ -17,7 +17,7 @@ import tr from '../locales/tr.json' with { type: 'json' };
 import ko from '../locales/ko.json' with { type: 'json' };
 import pt from '../locales/pt.json' with { type: 'json' };
 
-import type { Locale } from './types.js';
+import type { Locale } from './types';
 
 /** Static resource bundles keyed by Locale. Shape matches `en.json`. */
 export const RESOURCES: Record<Locale, typeof en> = {

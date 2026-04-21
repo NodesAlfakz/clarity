@@ -14,7 +14,7 @@
  */
 import type { Address, ChainId, CounterpartySnapshot } from '@clarity/shared';
 import { CHAINS } from '@clarity/shared';
-import { readCreditProfile } from '../storage/creditStore.js';
+import { readCreditProfile } from '../storage/creditStore';
 
 // Manually curated tag table. Hackathon-scope; replace with a real on-chain
 // labels dataset (Etherscan labels, Arkham, Nansen) later.

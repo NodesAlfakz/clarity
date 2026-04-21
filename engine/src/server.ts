@@ -11,9 +11,9 @@
  */
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
-import { registerAnalyzeRoute } from './routes/analyze.js';
-import { registerScoreRoute } from './routes/score.js';
-import { registerTranslateRoute } from './routes/translate.js';
+import { registerAnalyzeRoute } from './routes/analyze';
+import { registerScoreRoute } from './routes/score';
+import { registerTranslateRoute } from './routes/translate';
 
 const PORT = Number(process.env.PORT ?? 8787);
 

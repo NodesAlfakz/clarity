@@ -9,7 +9,7 @@ import {
   parseTransaction,
   isUnlimitedApproval,
   MAX_UINT256,
-} from '../contractParser.js';
+} from '../contractParser';
 
 describe('parseTransaction', () => {
   it('recognises plain ETH transfer', () => {

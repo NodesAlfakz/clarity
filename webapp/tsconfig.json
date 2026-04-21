@@ -2,13 +2,30 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@clarity/shared": ["../shared/src/index.ts"]
+      "@/*": [
+        "./src/*"
+      ],
+      "@clarity/shared": [
+        "../shared/src/index.ts"
+      ]
     },
-    "incremental": true
+    "incremental": true,
+    "allowJs": true,
+    "noEmit": true
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

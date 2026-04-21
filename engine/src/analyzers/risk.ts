@@ -5,7 +5,7 @@
  * Output: merged RiskFlag[] + overall RiskLevel.
  */
 import type { RiskFlag, RiskLevel, SimulationResult } from '@clarity/shared';
-import { isUnlimitedApproval, type ParsedIntent } from './contractParser.js';
+import { isUnlimitedApproval, type ParsedIntent } from './contractParser';
 
 export interface RiskAssessment {
   level: RiskLevel;

@@ -2,7 +2,7 @@
  * Chain metadata for supported EVM chains.
  */
 
-import type { ChainId } from './types.js';
+import type { ChainId } from './types';
 
 export interface ChainMeta {
   id: ChainId;

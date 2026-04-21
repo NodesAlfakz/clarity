@@ -7,7 +7,7 @@
  * a fallback UI.
  */
 import type { FastifyInstance } from 'fastify';
-import { readCreditProfile } from '../storage/creditStore.js';
+import { readCreditProfile } from '../storage/creditStore';
 
 export function registerScoreRoute(app: FastifyInstance) {
   app.get<{ Params: { address: string } }>('/score/:address', async (req, reply) => {

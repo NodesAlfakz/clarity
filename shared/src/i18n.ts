@@ -2,7 +2,7 @@
  * Localization constants and helpers.
  */
 
-import type { Locale } from './types.js';
+import type { Locale } from './types';
 
 export const SUPPORTED_LOCALES: readonly Locale[] = ['en', 'ru', 'zh', 'es', 'tr', 'ko', 'pt'] as const;
 

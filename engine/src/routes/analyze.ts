@@ -13,11 +13,11 @@
 import type { FastifyInstance } from 'fastify';
 import { z } from 'zod';
 import type { TxAnalysis } from '@clarity/shared';
-import { parseTransaction } from '../analyzers/contractParser.js';
-import { simulate } from '../analyzers/tenderly.js';
-import { scanTransaction } from '../analyzers/blockaid.js';
-import { assessRisk } from '../analyzers/risk.js';
-import { enrichCounterparty } from '../analyzers/counterparty.js';
+import { parseTransaction } from '../analyzers/contractParser';
+import { simulate } from '../analyzers/tenderly';
+import { scanTransaction } from '../analyzers/blockaid';
+import { assessRisk } from '../analyzers/risk';
+import { enrichCounterparty } from '../analyzers/counterparty';
 
 const Schema = z.object({
   chainId: z.union([z.literal(1), z.literal(8453), z.literal(42161), z.literal(10)]),

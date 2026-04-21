@@ -7,7 +7,7 @@
  */
 import type { FastifyInstance } from 'fastify';
 import { z } from 'zod';
-import { translate } from '../analyzers/translator.js';
+import { translate } from '../analyzers/translator';
 
 const Schema = z.object({
   locale: z.enum(['en', 'ru', 'zh', 'es', 'tr', 'ko', 'pt']),
