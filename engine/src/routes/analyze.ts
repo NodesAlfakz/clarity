@@ -17,6 +17,7 @@ import { parseTransaction } from '../analyzers/contractParser.js';
 import { simulate } from '../analyzers/tenderly.js';
 import { scanTransaction } from '../analyzers/blockaid.js';
 import { assessRisk } from '../analyzers/risk.js';
+import { enrichCounterparty } from '../analyzers/counterparty.js';
 
 const Schema = z.object({
   chainId: z.union([z.literal(1), z.literal(8453), z.literal(42161), z.literal(10)]),
@@ -47,14 +48,15 @@ export function registerAnalyzeRoute(app: FastifyInstance) {
       ...(tx.gasPrice ? { gasPrice: tx.gasPrice } : {}),
     };
 
-    // Run simulation + threat scan in parallel — independent, best-effort.
-    const [simulation, blockaidFlags] = await Promise.all([
+    // Run simulation + threat scan + counterparty enrichment in parallel.
+    const [simulation, blockaidFlags, counterparty] = await Promise.all([
       simulate(rawTx, chainId).catch((err) => ({
         success: false,
         balanceChanges: [],
         error: `simulate failed: ${err?.message ?? 'unknown'}`,
       })),
       scanTransaction(rawTx, chainId).catch(() => []),
+      enrichCounterparty(rawTx.to, chainId).catch(() => null),
     ]);
 
     const intent = parseTransaction(rawTx);
@@ -70,7 +72,7 @@ export function registerAnalyzeRoute(app: FastifyInstance) {
       },
       humanReadable: { fallback: intent.summary },
       simulation,
-      counterparty: null, // filled in by counterparty enrichment — D4
+      counterparty,
       alternatives: [],
     };
     return response;
