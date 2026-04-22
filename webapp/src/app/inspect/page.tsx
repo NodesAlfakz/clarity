@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
 import { LocaleSwitcher } from '../../components/LocaleSwitcher';
 
-const ENGINE_URL = process.env.NEXT_PUBLIC_ENGINE_URL ?? 'http://localhost:8787';
+// API proxies via Next.js route handler so everything runs behind a single origin.
+const API_PREFIX = '';
 
 interface CreditProfileResponse {
   address: string;
@@ -52,7 +53,7 @@ export default function InspectPage() {
     }
     setState({ status: 'loading' });
     try {
-      const res = await fetch(`${ENGINE_URL}/score/${trimmed}`);
+      const res = await fetch(`${API_PREFIX}/api/score/${trimmed}`);
       const body = await res.json();
       if (!res.ok) {
         setState({ status: 'error', error: body as ErrorResponse });
